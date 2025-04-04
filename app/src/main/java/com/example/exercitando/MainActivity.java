@@ -38,8 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
             String textoResultado = "";
             for (String frase : frases) {
-                textoResultado = textoResultado + frase;
+                textoResultado=textoResultado+ frase;
 
             }
+            texto.setText(textoResultado);
         }
     }
