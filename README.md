@@ -1,6 +1,6 @@
 # App Gerador de Frases
 
-App feito para exercitar o que havia estudado 
+Aplicativo que gera frase do dia aleatória, feito para exercitar aprendizado.
 
 # Tecnologias
 
