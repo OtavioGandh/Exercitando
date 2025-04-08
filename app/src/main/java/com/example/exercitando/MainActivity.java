@@ -10,6 +10,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     String [] frases = {
@@ -32,13 +34,19 @@ public class MainActivity extends AppCompatActivity {
 
         public void gerarFrase(View view){
 
+            TextView texto = findViewById(R.id.textResultado);
+            int numeroAleatorio = new Random().nextInt(3);
+            String frase = frases[numeroAleatorio];
+
+            texto.setText(frase);
+
         }
         public void exibirTodas(View view){
             TextView texto = findViewById(R.id.textResultado);
 
             String textoResultado = "";
             for (String frase : frases) {
-                textoResultado=textoResultado+ frase;
+                textoResultado=textoResultado + frase + "\n";
 
             }
             texto.setText(textoResultado);
