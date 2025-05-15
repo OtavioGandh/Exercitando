@@ -1,5 +1,6 @@
 package com.example.exercitando;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -32,23 +33,43 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-        public void gerarFrase(View view){
+//        public void gerarFrase(View view){
+//
+//            TextView texto = findViewById(R.id.textResultado);
+//            int numeroAleatorio = new Random().nextInt(3);
+//            String frase = frases[numeroAleatorio];
+//
+//            texto.setText(frase);
+//
+//        }
+//        public void exibirTodas(View view){
+//            TextView texto = findViewById(R.id.textResultado);
+//
+//            String textoResultado = "";
+//            for (String frase : frases) {
+//                textoResultado=textoResultado + frase + "\n";
+//
+//            }
+//            texto.setText(textoResultado);
 
-            TextView texto = findViewById(R.id.textResultado);
-            int numeroAleatorio = new Random().nextInt(3);
-            String frase = frases[numeroAleatorio];
+            Intent intent = new Intent();
 
-            texto.setText(frase);
+    class Filtro{
 
+        void filtroPretoEBranco(){
+            System.out.println("O filtro esta preto e branco");
         }
-        public void exibirTodas(View view){
-            TextView texto = findViewById(R.id.textResultado);
-
-            String textoResultado = "";
-            for (String frase : frases) {
-                textoResultado=textoResultado + frase + "\n";
-
-            }
-            texto.setText(textoResultado);
-        }
+       }
+       void filtroPretoEBranco(String imagem){
+        System.out.println("Estamos selecionando uma"+imagem);
     }
+        void filtroPretoEBranco(String imagem, int nivelDePetroEBranco){
+            System.out.println("O mesmo q as outras");
+        }
+
+        Filtro filtro = new Filtro();
+        filtro.fil
+
+
+}
+
